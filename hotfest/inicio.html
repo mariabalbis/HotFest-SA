@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela inicial</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+    
+    <div class="branco">
+
+        <img class="logo" src="HotFest.png" alt="logo">
+
+        <div class="BarraPesquisa">
+            <input type="text" style="margin-bottom: -35px;" id="inptBusca" placeholder="Busca ex: (sobremesas...)">
+            <img class = "lupaImg" style="margin-top: -19px;" src="lupa.png" alt="lupa">
+        </div>
+        <div class="icones-gerais">
+            
+            <div class = "icones">
+                <img onclick = "abrirCadastro()" class = "iconeImg" src="icone.png">
+                <img class="linha" src="linha.png" alt="linha">
+                <img onclick="abrirModal()" class = "iconeImg" src="carrinho.png">
+            </div>
+        </div>
+    </div>
+    <div id = 'conjunto'>
+    <div id="produtos">
+        <ul id="listaProdutos"></ul>
+    </div>   
+
+    <div class="promocao">
+        <img class="promocao" src="promocao.png" alt="promocao">
+    </div>
+</div>
+
+
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+             <img src="botaoX.png" class = "x" onclick="fecharModal()">
+             <div class = "carrinhoCarrinho">
+             <img class = "carrinhoImg2" src="carrinho.png">
+            <h2 class="tituloModal">MEU CARRINHO</h2>
+        </div>
+            <p class="carrinhoVazio">Ops, seu carrinho está vazio...</p>
+            <button onclick="fecharModal()" class="verCardapio"> Clique aqui para ver o cardápio!</button>
+        </div>
+    </div>
+
+    <div class = centralizarBtn>
+        <button onclick="adicionarAvaliação()" id="btnAbrirModal"> Adicionar avaliação + </button>
+    </div>
+
+    <div id="modalAvaliação" class="modalAvaliação">
+        <div class="modal-content">
+             <img src="botaoX.png" class = "x" onclick="fecharModal()">
+             <h1 class = "tituloAvaliação">Adicionar avaliação</h1>
+             <div class="inptsModalAvaliação">
+                <label>Nome da pessoa: </label><br>
+                <input type="text" class="inptNome" id="nome" placeholder="Nome da Pessoa" ></input>
+                <br>
+                <label>Quantas estrelas? </label><br>
+                <input type="number" class="inptEstrela" id="estrela" placeholder="Estrelas" ></input>
+                <br>
+                <label>Escreva aqui sua avaliação: </label><br>
+                <input type="text" class="inptAval" id="avaliação" placeholder="Avaliação" ></input>
+                <br>
+                <label>Faça upload das fotos do produto aqui:</label><br>
+                <input type="text" class="inptImgProd" id="urlImage" placeholder="URL da imagem do produto" required>
+                <button id = "btnAvaliação" onclick="Avaliar()">Avaliar</button>
+                <br>
+                </div>
+                </div> 
+        
+        </div>
+        </div> 
+
+<script src="modalCarrinho.js"></script>
+
+</body>
+</html>
